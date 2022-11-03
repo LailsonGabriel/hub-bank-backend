@@ -16,7 +16,7 @@ class TransfersService {
 
   public async findAllTransfersByUser(cpf: string): Promise<ITransfers[]> {
     if (!this.userService.findUserByCPF(cpf)) {
-      throw new Error(`${cpf} not found`);
+      throw new Error(`user ${cpf} not found`);
     }
     const allTransfers = await this.transfers.find({ sender: cpf });
 
