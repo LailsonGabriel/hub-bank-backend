@@ -1,3 +1,5 @@
+import { Router } from "express";
+
 export interface IUser {
   name: string;
   cpf: string;
@@ -11,4 +13,9 @@ export interface ITransfers {
   recipient: string;
   sender: string;
   type: string;
+}
+
+export interface Route {
+  path: string;
+  router: Router;
 }

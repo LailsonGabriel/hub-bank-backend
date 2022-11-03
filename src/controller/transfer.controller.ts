@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from "express";
-import { ITransfers } from "../models/interfaces";
+import { ITransfers } from "../interfaces";
 import TransfersService from "../services/transfer.service";
 
 class TransfersController {

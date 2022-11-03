@@ -1,4 +1,4 @@
-import { ITransfers } from "../models/interfaces";
+import { ITransfers } from "../interfaces";
 import TransfersModel from "../models/transfers.model";
 import UserService from "./user.service";
 

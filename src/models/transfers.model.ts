@@ -1,6 +1,6 @@
 import * as mongoose from "mongoose";
 import { Schema, model } from "mongoose";
-import { ITransfers } from "./interfaces";
+import { ITransfers } from "../interfaces";
 
 const TransfersSchema = new Schema<ITransfers>({
   amount: Number,
