@@ -24,7 +24,7 @@ class TransfersController {
     next: NextFunction,
   ) => {
     try {
-      const { cpf }: { cpf: string } = req.body;
+      const { cpf } = req.params;
 
       const allTransfers = await this.transfersService.findAllTransfersByUser(
         cpf,

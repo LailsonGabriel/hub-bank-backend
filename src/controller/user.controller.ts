@@ -7,7 +7,7 @@ class UserController {
 
   public findUser = async (req: Request, res: Response, next: NextFunction) => {
     try {
-      const { cpf } = req.body;
+      const { cpf } = req.params;
       const user: IUser = await this.userService.findUserByCPF(cpf);
       res.status(200).json({ data: user });
     } catch (err) {
