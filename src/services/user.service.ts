@@ -17,7 +17,7 @@ import { IUser } from "../models/interfaces";
 
 // export { findUserByCPF, createUser };
 
-class UserServicer {
+class UserService {
   public users = UserModel;
 
   public async findUserByCPF(cpf: string): Promise<IUser> {
@@ -36,3 +36,5 @@ class UserServicer {
     return user;
   }
 }
+
+export default UserService;
