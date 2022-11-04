@@ -22,7 +22,6 @@ class UserService {
 
   public async findUserByCPF(cpf: string): Promise<IUser> {
     const user = await this.users.findOne({ cpf });
-
     if (!user) throw new Error(`user ${cpf} not found`);
 
     return user;

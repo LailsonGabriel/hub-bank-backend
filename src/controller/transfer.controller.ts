@@ -26,9 +26,8 @@ class TransfersController {
     try {
       const { cpf } = req.params;
 
-      const allTransfers = await this.transfersService.findAllTransfersByUser(
-        cpf,
-      );
+      const allTransfers: ITransfers[] =
+        await this.transfersService.findAllTransfersByUser(cpf);
 
       res.status(200).json({ data: allTransfers });
     } catch (err) {

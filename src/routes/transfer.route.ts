@@ -3,7 +3,7 @@ import { Route } from "../interfaces";
 import TransferController from "../controller/transfer.controller";
 
 class UsersRoute implements Route {
-  public path = "/users";
+  public path = "/transfers";
   public router = Router();
   public transfersController = new TransferController();
 
@@ -13,7 +13,7 @@ class UsersRoute implements Route {
 
   private initializeRoutes() {
     this.router.get(
-      `${this.path}`,
+      `${this.path}/:cpf`,
       this.transfersController.findTransfersByUser,
     );
     this.router.post(`${this.path}/new`, this.transfersController.transfer);

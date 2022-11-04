@@ -1,15 +1,7 @@
-import express from "express";
-import connectToMongoDB from "./database";
-import routes from "./routes/index.route";
+import App from "./app";
+import UsersRoute from "./routes/user.route";
+import TransfersRoute from "./routes/transfer.route";
 
-const app = express();
+const app = new App([new UsersRoute(), new TransfersRoute()]);
 
-app.use(routes);
-app.use(express.json());
-
-connectToMongoDB();
-
-const PORT = 5000;
-app.listen(PORT, () => {
-  console.log(`Porta ${PORT} iniciada`);
-});
+app.listen();

@@ -12,7 +12,7 @@ class UsersRoute implements Route {
   }
 
   private initializeRoutes() {
-    this.router.get(`${this.path}`, this.usersController.findUser);
+    this.router.get(`${this.path}/:cpf`, this.usersController.findUser);
     this.router.post(`${this.path}/create`, this.usersController.createUser);
   }
 }
