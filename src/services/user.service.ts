@@ -1,22 +1,6 @@
 import UserModel from "../models/user.model";
 import { IUser } from "../interfaces";
 
-// const createUser = async (body: IUser): Promise<IUser> => {
-//   const newUser = new UserModel(body);
-
-//   await newUser.save();
-
-//   return newUser;
-// };
-
-// const findUserByCPF = async (cpf: string): Promise<IUser> => {
-//   const user = await UserModel.findOne({ cpf });
-
-//   return user;
-// };
-
-// export { findUserByCPF, createUser };
-
 class UserService {
   public users = UserModel;
 
